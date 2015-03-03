@@ -424,16 +424,16 @@
             
             [btnAll addObject: btnAllLeft];
             
-            if(i == 0) {
+            if(i == [_channelArray count] - 2) {
                 // 加载右边的按钮
-                for(int i = 1; i < [_channelArray count] && i % 2 == 1; i = i + 2) {
+                for(int j = 1; j < [_channelArray count] && j % 2 == 1; j = j + 2) {
                     UIButton *btnAllRight = [UIButton buttonWithType: UIButtonTypeCustom];
                     
                     channels = [[ModelPro alloc] init];
-                    if(i == [_channelArray count] - 1) {
+                    if(j == [_channelArray count] - 1) {
                         return cell;
                     } else {
-                        channels = [_channelArray objectAtIndex: i+1];
+                        channels = [_channelArray objectAtIndex: j+1];
                     }
                     
                     NSString *btnNmaeRight = channels.channelName;

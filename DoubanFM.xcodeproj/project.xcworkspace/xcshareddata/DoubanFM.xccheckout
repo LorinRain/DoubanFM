@@ -10,14 +10,14 @@
 	<string>DoubanFM</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>61259375C97A5048F873323BF2DC37105018B655</key>
+		<key>B8A5EF7DEF6925A7E9F6098BC13BDDAAD5516B33</key>
 		<string>https://bitbucket.org/LorinRain/doubanfm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DoubanFM.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>61259375C97A5048F873323BF2DC37105018B655</key>
+		<key>B8A5EF7DEF6925A7E9F6098BC13BDDAAD5516B33</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>61259375C97A5048F873323BF2DC37105018B655</string>
+	<string>B8A5EF7DEF6925A7E9F6098BC13BDDAAD5516B33</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>61259375C97A5048F873323BF2DC37105018B655</string>
+			<string>B8A5EF7DEF6925A7E9F6098BC13BDDAAD5516B33</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DoubanFM</string>
 		</dict>
