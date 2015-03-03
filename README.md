@@ -1,6 +1,8 @@
 # DoubanFM
 很早以前的写的仿豆瓣FM官方APP的一款APP
 
+接口参考：https://github.com/zonyitoo/doubanfm-qt/wiki/%E8%B1%86%E7%93%A3FM-API
+
 真机调试：
 
 进入应用：
