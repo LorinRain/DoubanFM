@@ -4,32 +4,41 @@
 真机调试：
 
 进入应用：
+
 ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0114.PNG)
  
  选择频道：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0115.PNG)
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0116.PNG)
  
  
  “更多”页面：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0117.PNG)
  
  
  “登录”界面：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0118.PNG)
  
  
  登录后“更多”界面：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0119.PNG)
  
  
  登录后收听红心频道：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0120.PNG)
  
  
  登录后选择频道界面：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0121.PNG)
  
  
  关于：
+ 
  ![image](https://github.com/LorinRain/DoubanFM/raw/master/ScreenShots/IMG_0122.PNG)
