@@ -120,9 +120,10 @@
     //    [requestChannel setRequestMethod: @"GET"];
     //    [requestChannel setTimeOutSeconds: 30];
     //
+    __weak ASIFormDataRequest *weakRequestChannel = requestChannel;
     // 请求完成时调用
     [requestChannel setCompletionBlock:^() {
-        NSData *data = requestChannel.responseData;
+        NSData *data = weakRequestChannel.responseData;
         
         // 得到的json写入文件
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -164,7 +165,7 @@
     
     // 出错时调用
     [requestChannel setFailedBlock:^() {
-        NSError *error = requestChannel.error;
+        NSError *error = weakRequestChannel.error;
         NSLog(@"请求频道出错!%@",error);
     }];
     
@@ -223,9 +224,10 @@
     [request setRequestMethod: @"GET"];
     [request setTimeOutSeconds: 30];
     
+    __weak ASIFormDataRequest *weakRequest = request;
     // 请求完成时调用
     [request setCompletionBlock:^() {
-        NSData *data = request.responseData;
+        NSData *data = weakRequest.responseData;
         
         // 最外层字典
         NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingAllowFragments error: nil];
@@ -283,7 +285,7 @@
     // 出错时调用
     [request setFailedBlock:^() {
         [_delegate sendError];
-        NSError *error = request.error;
+        NSError *error = weakRequest.error;
         NSLog(@"请求歌曲出错!%@",error);
         return;
     }];
@@ -300,9 +302,10 @@
     [request setRequestMethod: @"GET"];
     [request setTimeOutSeconds: 10];
     
+    __weak ASIFormDataRequest *weakRequest = request;
     // 请求完成时调用
     [request setCompletionBlock:^() {
-        NSData *data = request.responseData;
+        NSData *data = weakRequest.responseData;
         
         [_delegate sendPictureData: data];
         
@@ -310,7 +313,7 @@
     
     // 出错时调用
     [request setFailedBlock:^() {
-        NSError *error = request.error;
+        NSError *error = weakRequest.error;
         NSLog(@"请求图片出错!%@",error);
     }];
     
@@ -327,9 +330,10 @@
     [request setRequestMethod: @"GET"];
     [request setTimeOutSeconds: 20];
     
+    __weak ASIFormDataRequest *weakRequest = request;
     // 请求完成时调用
     [request setCompletionBlock:^() {
-        NSData *data = request.responseData;
+        NSData *data = weakRequest.responseData;
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: nil];
         
@@ -362,7 +366,7 @@
     // 出错时调用
     [request setFailedBlock:^() {
         [_delegate sendLoginStatu: NO];
-        NSError *error = request.error;
+        NSError *error = weakRequest.error;
         NSLog(@"请求登录数据出错!%@",error);
         return;
     }];
@@ -388,8 +392,9 @@
     [request setRequestMethod: @"GET"];
     [request setTimeOutSeconds: 5];
     
+    __weak ASIFormDataRequest *weakRequest = request;
     [request setCompletionBlock:^() {
-        NSData *data = request.responseData;
+        NSData *data = weakRequest.responseData;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableContainers error: nil];
         
         NSNumber *erro = [dic objectForKey: @"r"];

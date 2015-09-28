@@ -38,6 +38,13 @@
     logo.frame = CGRectMake(2+15, 7, 30, 30);
     [navView addSubview: logo];
     
+    // logo添加手势，使返回按钮点击区域更大
+    logo.userInteractionEnabled = YES;
+    UITapGestureRecognizer *logoTap = [[UITapGestureRecognizer alloc] init];
+    logoTap.numberOfTapsRequired = 1;
+    [logoTap addTarget: self action: @selector(btnBackAction)];
+    [logo addGestureRecognizer: logoTap];
+    
     UIButton *btnBack = [UIButton buttonWithType: UIButtonTypeCustom];
     btnBack.frame = CGRectMake(0, 0, 17, self.navigationController.navigationBar.frame.size.height);
     //[btnBack setImage: [UIImage imageNamed: @"ab_back_holo_light.png"] forState: UIControlStateNormal];

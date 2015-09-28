@@ -32,7 +32,7 @@
 -(void) senLoginInfo: (ModelPro *) model;
 
 // 请求后，报告登录状态
--(void) sendLoginStatu: (BOOL *) isLogin;
+-(void) sendLoginStatu: (BOOL) isLogin;
 
 // 请求后，没有歌曲
 - (void)sendNoSongs;

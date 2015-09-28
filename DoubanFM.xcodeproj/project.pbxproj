@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A0919DE19ED2FC400F7013B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919DD19ED2FC400F7013B /* RootViewController.m */; };
 		5A0919E119ED302A00F7013B /* ChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919E019ED302A00F7013B /* ChannelView.m */; };
-		5A0919E419ED303D00F7013B /* UINavigationController+Lorin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919E319ED303D00F7013B /* UINavigationController+Lorin.m */; };
 		5A0919E819ED310700F7013B /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919E719ED310700F7013B /* AboutVC.m */; };
 		5A0919EB19ED314600F7013B /* DoubanHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919EA19ED314600F7013B /* DoubanHelpVC.m */; };
 		5A0919EE19ED319500F7013B /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0919ED19ED319500F7013B /* LoginVC.m */; };
@@ -81,6 +80,7 @@
 		5A091A9419ED372300F7013B /* splash_screen_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A091A6619ED372300F7013B /* splash_screen_logo.png */; };
 		5A091A9519ED372300F7013B /* splash_screen_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A091A6719ED372300F7013B /* splash_screen_wave.png */; };
 		5A091A9619ED372300F7013B /* title_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A091A6819ED372300F7013B /* title_icon.png */; };
+		5A1F66DC1BAFADBB0039B3AD /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F66DB1BAFADBB0039B3AD /* ChannelCell.m */; settings = {ASSET_TAGS = (); }; };
 		5A3F074119ED288D007759E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3F074019ED288D007759E2 /* Foundation.framework */; };
 		5A3F074319ED288D007759E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3F074219ED288D007759E2 /* CoreGraphics.framework */; };
 		5A3F074519ED288D007759E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3F074419ED288D007759E2 /* UIKit.framework */; };
@@ -110,8 +110,6 @@
 		5A0919DD19ED2FC400F7013B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		5A0919DF19ED302A00F7013B /* ChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelView.h; sourceTree = "<group>"; };
 		5A0919E019ED302A00F7013B /* ChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelView.m; sourceTree = "<group>"; };
-		5A0919E219ED303D00F7013B /* UINavigationController+Lorin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Lorin.h"; sourceTree = "<group>"; };
-		5A0919E319ED303D00F7013B /* UINavigationController+Lorin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Lorin.m"; sourceTree = "<group>"; };
 		5A0919E519ED30C300F7013B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		5A0919E619ED310700F7013B /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
 		5A0919E719ED310700F7013B /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
@@ -206,6 +204,8 @@
 		5A091A6619ED372300F7013B /* splash_screen_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_logo.png; sourceTree = "<group>"; };
 		5A091A6719ED372300F7013B /* splash_screen_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_wave.png; sourceTree = "<group>"; };
 		5A091A6819ED372300F7013B /* title_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_icon.png; sourceTree = "<group>"; };
+		5A1F66DA1BAFADBB0039B3AD /* ChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCell.h; sourceTree = "<group>"; };
+		5A1F66DB1BAFADBB0039B3AD /* ChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelCell.m; sourceTree = "<group>"; };
 		5A3F073D19ED288D007759E2 /* DoubanFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3F074019ED288D007759E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A3F074219ED288D007759E2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -562,8 +562,8 @@
 			children = (
 				5A0919DF19ED302A00F7013B /* ChannelView.h */,
 				5A0919E019ED302A00F7013B /* ChannelView.m */,
-				5A0919E219ED303D00F7013B /* UINavigationController+Lorin.h */,
-				5A0919E319ED303D00F7013B /* UINavigationController+Lorin.m */,
+				5A1F66DA1BAFADBB0039B3AD /* ChannelCell.h */,
+				5A1F66DB1BAFADBB0039B3AD /* ChannelCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -672,9 +672,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = LorinRain;
 				TargetAttributes = {
-					5A3F073C19ED288D007759E2 = {
-						DevelopmentTeam = W8BZHG2ZVT;
-					};
 					5A3F075719ED288D007759E2 = {
 						TestTargetID = 5A3F073C19ED288D007759E2;
 					};
@@ -770,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0919E819ED310700F7013B /* AboutVC.m in Sources */,
+				5A1F66DC1BAFADBB0039B3AD /* ChannelCell.m in Sources */,
 				5A0919E119ED302A00F7013B /* ChannelView.m in Sources */,
 				5A091A1D19ED338900F7013B /* ASIDataCompressor.m in Sources */,
 				5A0919EB19ED314600F7013B /* DoubanHelpVC.m in Sources */,
@@ -786,7 +784,6 @@
 				5A3F078319ED29EC007759E2 /* AppDelegate.m in Sources */,
 				5A091A2119ED338900F7013B /* ASIHTTPRequest.m in Sources */,
 				5A091A2519ED338900F7013B /* Reachability.m in Sources */,
-				5A0919E419ED303D00F7013B /* UINavigationController+Lorin.m in Sources */,
 				5A0919EE19ED319500F7013B /* LoginVC.m in Sources */,
 				5A0919F219ED321700F7013B /* MorePageCell.m in Sources */,
 				5A0919DE19ED2FC400F7013B /* RootViewController.m in Sources */,

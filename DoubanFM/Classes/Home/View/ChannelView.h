@@ -10,6 +10,7 @@
 #import "GetData.h"
 #import "ModelPro.h"
 #import "DoubanFMData.h"
+#import "ChannelCell.h"
 
 @protocol SendChannel <NSObject>
 
@@ -20,30 +21,26 @@
 
 @end
 
-@interface ChannelView : UIView<UITableViewDataSource, UITableViewDelegate, SendData>
+@interface ChannelView : UIView<UITableViewDataSource, UITableViewDelegate, SendData, ChannelCellDeleagte>
 {
     UIScrollView *_scrollView;  // 作为根视图
-    UITableView *_tableView;
     
     GetData *getData;
     ModelPro *channels;
     
-    NSMutableArray *btnAll;     // 定义数组，存放所有的按钮
-    //NSMutableArray *btnRight;
-    
-    NSInteger btnTag;    // 全局变量，取得按钮的tag值，让table在滚动时，不会把图标抹去
-    BOOL btnClicked;     // 按钮是否被按
-    
     DoubanFMData *sqliteDataV;
     
-    UIImageView *imgView;   // 正在播放图标
+    NSMutableArray *sectionOneArray;  // 第一个section的数据数组（只显示私人和红心）
+    NSMutableArray *sectionTwoArray;  // 第二个section的数据数组（显示推荐频道）
     
 }
 
 @property (nonatomic, assign) id<SendChannel> delegate;
 
+@property(nonatomic, strong) UITableView *tableView;
+
 //-------------------数据相关-------------------
-@property (nonatomic, strong) NSArray *channelArray;  // 接收频道列表
+@property (nonatomic, strong) NSMutableArray *channelArray;  // 接收频道列表
 
 @property (nonatomic) BOOL isChannelShowed;    // 判断是否已经有列表了
 @property (nonatomic, strong) NSString *currentChannelV;
@@ -60,11 +57,15 @@
 @property (nonatomic, strong) UILabel *userNameLabel;
 
 -(void) requstData;      // 请求数据方法，将它分离，在init的时候就不必进行网络请求
--(void) setPlayingIcon: (UIButton *) btn;   // 将“正在播放”图标加在所点击的按钮上
--(void) cleanOtherIcon: (UIButton *) btn;   // 将非点击按钮上的“正在播放”按钮清除
 
 // 刷新表格
 -(void) relodTable;
+
+// 切换频道
+- (void)changeToChannnel:(NSString *)channel;
+
+// 获取当前正在播放的频道
++ (NSString *)currentPlayingChannel;
 
 @end
 

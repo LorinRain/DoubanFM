@@ -12,8 +12,6 @@
 #import "ModelPro.h"
 #import "MoreVC.h"
 
-//#import "UINavigationController+Lorin.h"
-
 @implementation RootViewController
 
 @synthesize songPicture = _songPicture;
@@ -423,6 +421,16 @@
     [hud showAnimated: YES whileExecutingBlock:^() {
         sleep(3);
     }];
+    
+    // 返回私人频道
+    if(!channelView) {
+        channelView = [[ChannelView alloc] init];
+    }
+    
+    [channelView changeToChannnel: @"0"];
+    
+    // 刷新表格
+    [channelView.tableView reloadData];
 }
 
 
@@ -640,7 +648,7 @@
         [hud setLabelFont: [UIFont systemFontOfSize: 13.f]];
         
         [hud showAnimated: YES whileExecutingBlock:^() {
-            sleep(3);
+            sleep(2);
         }];
         
     } else {
@@ -650,12 +658,9 @@
         currentChannelId = getData.channelId;
         [getData getSongs];
         
+        // 将视图滚出
+        [_scrollView setContentOffset: CGPointMake((250 / 320.0) * self.view.frame.size.width, 0) animated: YES];
     }
-    
-    // 下面两个方法都是在选择完频道后，将选择视图滚出
-    //[scrollView setContentOffset: CGPointMake(250, 0)];
-    //[_scrollView scrollRectToVisible: CGRectMake((250 / 320.0) * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height) animated: YES];
-    [_scrollView setContentOffset: CGPointMake((250 / 320.0) * self.view.frame.size.width, 0) animated: YES];
 }
 
 -(void) sendLogin
@@ -709,11 +714,18 @@
     UIImageView *logo = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"ic_actionbar_logo.png"]];
     logo.frame = CGRectMake(2+15, 7, 30, 30);
     [navView addSubview: logo];
+    logo.userInteractionEnabled = YES;
+    
+    // 添加手势，使返回按钮点击区域更大
+    UITapGestureRecognizer *logoTap = [[UITapGestureRecognizer alloc] init];
+    logoTap.numberOfTapsRequired = 1;
+    [logoTap addTarget: self action: @selector(logoTapped:)];
+    [logo addGestureRecognizer: logoTap];
 
     logoLabel = [[UILabel alloc] initWithFrame: CGRectMake(35+15, 8+5, 150, 20)];
     logoLabel.text = navTitle;
     [logoLabel setTextColor: [UIColor blackColor]];
-    [logoLabel setTextAlignment: UITextAlignmentLeft];
+    [logoLabel setTextAlignment: NSTextAlignmentLeft];
     logoLabel.backgroundColor = [UIColor clearColor];
     logoLabel.font = [UIFont systemFontOfSize: 16.f];
     [navView addSubview: logoLabel];
@@ -778,6 +790,11 @@
 - (void)btnBackClick
 {
     [_scrollView setContentOffset: CGPointMake(0, 0) animated: YES];
+}
+
+- (void)logoTapped:(UITapGestureRecognizer *)tap
+{
+    [self btnBackClick];
 }
 
 #pragma mark - 网络判断
